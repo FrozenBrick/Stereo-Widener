@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Audio FX Suite",
+  "version": "3.0",
+  "description": "Stereo Widener + Depth Surround (Viper4Android Re-impl)",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Audio FX Controls"
+  }
+}

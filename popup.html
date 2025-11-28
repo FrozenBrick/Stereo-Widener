@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 280px; padding: 15px; background: #1a1a1a; color: #eee; font-family: sans-serif; }
+    h3 { margin-top: 0; color: #00d2ff; text-align: center; border-bottom: 1px solid #333; padding-bottom: 10px;}
+    
+    .fx-group { background: #252525; padding: 10px; border-radius: 6px; margin-bottom: 10px; border: 1px solid #333; }
+    .fx-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+    .fx-title { font-weight: bold; color: #bada55; }
+    
+    label { font-size: 0.85em; color: #aaa; display: flex; justify-content: space-between; }
+    input[type=range] { width: 100%; margin: 8px 0; accent-color: #00d2ff; }
+    input[type=checkbox] { accent-color: #bada55; transform: scale(1.2); }
+
+    .main-btn { width: 100%; background: #00d2ff; color: #000; border: none; padding: 10px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+    .main-btn:hover { background: #33e0ff; }
+    
+    .val-display { color: #fff; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h3>Audio FX Suite</h3>
+
+  <button id="injectBtn" class="main-btn">Activate Audio Engine</button>
+  
+  <div id="controls" style="display:none; margin-top:15px;">
+    
+    <!-- STEREO WIDENER -->
+    <div class="fx-group">
+      <div class="fx-header">
+        <span class="fx-title">Stereo Widener</span>
+        <input type="checkbox" id="toggleWide" checked>
+      </div>
+      <label>Width: <span id="valWide" class="val-display">2.0</span></label>
+      <input type="range" id="sliderWide" min="0" max="4" step="0.1" value="2.0">
+    </div>
+
+    <!-- DEPTH SURROUND -->
+    <div class="fx-group">
+      <div class="fx-header">
+        <span class="fx-title">Depth Surround</span>
+        <input type="checkbox" id="toggleDepth" checked>
+      </div>
+      <label>Strength: <span id="valDepth" class="val-display">800</span></label>
+      <input type="range" id="sliderDepth" min="0" max="1200" step="10" value="800">
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
